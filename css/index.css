@@ -1,0 +1,171 @@
+/*****************************/
+/*********** index ***********/
+/*****************************/
+
+
+/****************************/
+/*********** hero ***********/
+/****************************/
+
+main #hero{
+	min-height:70vh;
+	padding-block:3em;
+	padding-inline:2em;
+	background:var(--portfolio-yellow);
+	color:var(--portfolio-blue);
+}
+
+main #hero h3{
+	width:25%;
+}
+
+main #hero h1{
+	width:min-content;
+	margin-block:.5em;
+}
+
+
+/*****************************/
+/*********** about ***********/
+/*****************************/
+
+main #about{
+
+	padding:4em 2em;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+main #about p{
+	max-width:70ch;
+}
+
+
+/***************************************/
+/*************** project ***************/
+/***************************************/
+
+main #project{
+	background:var(--portfolio-yellow);
+}
+
+main #project grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+}
+
+main #project grid a{
+	aspect-ratio:1/1;
+}
+
+main #project grid a .overlay{
+	gap:20px;
+	height:100%;
+	background:var(--portfolio-blue-80);
+	backdrop-filter:blur(10px);
+	opacity:0%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	transition:var(--transition);
+}
+
+main #project grid a .overlay:hover{
+	opacity:100%;
+}
+
+main #project grid a div svg{
+	margin-inline:auto;
+	width:50px;
+	fill:var(--portfolio-yellow);
+}
+
+main #project grid a img{
+	height:2em;
+}
+
+main #project grid a{
+	text-align:center;
+	color:var(--portfolio-yellow);
+	text-decoration:none;
+}
+
+main #project grid #iem{
+	background:url(../export/iem/iem_segment.png) center / cover;
+}
+
+main #project grid #dev{
+	background:url(../export/dev/dev_segment.png) center / cover;
+}
+
+main #project grid #tch{
+	background:url(../export/tch/tch_segment.png) center / cover;
+}
+
+main #project grid #tsv{
+	background:url(../export/tsv/tsv_segment.png) center / cover;
+}
+
+
+/*************************************/
+/*************** skill ***************/
+/*************************************/
+
+main #skill{
+	padding:2em 4em;
+	background:var(--portfolio-yellow);
+	color:var(--portfolio-blue);
+	display:flex;
+	gap:5em;
+	justify-content:center;
+	vertical-align:center;
+}
+
+main #skill header{
+	display:flex;
+	flex-direction:column;
+	gap:.5em;
+}
+
+main #skill flex{
+	width:fit-content;
+	height:2.5em;
+	margin-block:auto;
+	display:flex;
+	gap:2em;
+}
+
+main #skill flex a{
+	transition:var(--transition);
+}
+
+main #skill flex a:hover{
+	scale:1.2;
+}
+
+main #skill flex a img{
+	height:100%;
+}
+
+
+/*******************************************/
+/*********** media queries 960px ***********/
+/*******************************************/
+
+@media only screen and (max-width:960px){
+	main #project grid{
+		grid-template-columns:repeat(2,1fr);
+	}
+
+	main #skill{
+		padding:1em 2em;
+		flex-direction:column;
+		gap:2em;
+		text-align:center;
+	}
+
+	main #skill flex{
+		margin-inline:auto;
+	}
+}

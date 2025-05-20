@@ -1,0 +1,61 @@
+/***************************************/
+/*********** section: artist ***********/
+/***************************************/
+
+#artist{
+	margin-top:3em;
+	padding-bottom:2em;
+}
+
+#artist .container{
+	width:97%;
+	height:90vh;
+	background:url(../image/main/artist_1920.jpg) no-repeat 40% / cover;
+}
+
+#artist .content h2{
+	width:fit-content;
+	margin-bottom:1.5em;
+	padding-block:2em .5em;
+	padding-inline:.5em 1em;
+	background:var(--logo-text);
+	color:white;
+}
+
+#artist .content flex{
+	width:94%;
+	margin-inline:auto;
+	display:flex;
+	flex-direction:column;
+	gap:3em;
+}
+
+
+/************************************************/
+/*********** section: artist (tablet) ***********/
+/************************************************/
+
+@media (min-width:768px){
+	#artist{
+		padding-bottom:5em;
+	}
+
+	#artist .content h2{
+		padding-inline:4.5em 1.5em;
+	}
+
+	#artist .content flex{
+		width:64%;
+	}
+}
+
+
+/*************************************************/
+/*********** section: artist (desktop) ***********/
+/*************************************************/
+
+@media (min-width:1400px){
+	#artist{
+		display:flex;
+	}
+}

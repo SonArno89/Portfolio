@@ -1,0 +1,87 @@
+/****************************************/
+/*********** section: founder ***********/
+/****************************************/
+
+#founder{
+	margin-top:3em;
+	padding-bottom:4em;
+}
+
+#founder .container{
+	height:90vh;
+	margin-bottom:2em;
+	background:url(../image/main/founder_1920.jpg) no-repeat 27.5% / cover;
+}
+
+#founder .content h2{
+	width:fit-content;
+	margin-bottom:1em;
+	padding-block:.5em;
+	padding-inline:1.5em;
+	background:var(--logo-text);
+	color:white;
+	position:relative;
+	z-index:-1;
+}
+
+#founder .content flex{
+	width:94%;
+	margin-inline:auto;
+	display:flex;
+	flex-direction:column;
+	gap:3em;
+}
+
+#founder .content flex p{
+	text-wrap:pretty;
+}
+
+
+/*************************************************/
+/*********** section: founder (tablet) ***********/
+/*************************************************/
+
+@media (min-width:768px){
+	#founder .content h2{
+		padding-inline:4.5em 1.5em;
+	}
+
+	#founder .content flex{
+		width:64%;
+	}
+}
+
+
+/**************************************************/
+/*********** section: founder (desktop) ***********/
+/**************************************************/
+
+@media (min-width:1400px){
+	#founder{
+		padding-bottom:0;
+		display:flex;
+		justify-content:space-between;
+	}
+
+	#founder .container{
+		height:100vh;
+		width:45%;
+	}
+
+	#founder .content{
+		width:45%;
+	}
+
+	#founder .content h2{
+		margin-top:2em;
+		margin-left:-6em;
+		padding-inline:7em;
+	}
+
+	#founder .content flex{
+		height:40em;
+		width:60%;
+		gap:2em;
+		margin-inline:0;
+	}
+}

@@ -1,0 +1,248 @@
+/*******************************/
+/*********** project ***********/
+/*******************************/
+
+
+/*******************************/
+/*********** general ***********/
+/*******************************/
+
+body{
+	position:relative;
+	background:var(--portfolio-yellow);
+}
+
+h2{
+	width:min-content;
+	color:var(--portfolio-blue);
+	position:sticky;
+	top:2em;
+}
+
+main{
+	margin-inline:auto;
+	padding-inline:2em;
+	display:flex;
+	background:var(--portfolio-yellow);
+}
+
+main > *{
+	width:calc(100% / 3);
+}
+
+
+/***********************************/
+/*********** back-to-top ***********/
+/***********************************/
+
+.back-to-top{
+	position:absolute;
+	z-index:1;
+	top:120vh;
+	bottom:3em;
+	left:2em;
+}
+
+.back-to-top a{
+	border:.2em solid var(--portfolio-blue);
+	border-radius:50%;
+	display:flex;
+	position:sticky;
+	top:90vh;
+	transition:var(--transition);
+}
+
+.back-to-top a svg{
+	width:2.5em;
+	fill:var(--portfolio-blue);
+	transition:var(--transition);
+}
+
+.back-to-top a:hover{
+	background:var(--portfolio-blue);
+}
+
+.back-to-top a:hover svg{
+	fill:var(--portfolio-yellow);
+}
+
+
+/************************************/
+/*********** column-title ***********/
+/************************************/
+
+main #column-title{
+	position:relative;
+}
+
+
+/***********************************/
+/*********** column-grid ***********/
+/***********************************/
+
+main #column-grid{
+	width:55em;
+	background-size:80%;
+	background-position:top right;
+	color:var(--portfolio-yellow);
+	display:grid;
+	grid-template-columns:20% 80%;
+}
+
+main .iem{
+	background:url(../export/iem/iem_full.png) repeat-y;
+}
+
+main .dev{
+	background:url(../export/dev/dev_full.png) repeat-y;
+}
+
+main .tch{
+	background:url(../export/tch/tch_full.png) repeat-y;
+}
+
+main .tsv{
+	background:url(../export/tsv/tsv_full.png) repeat-y;
+}
+
+main #column-grid > *{
+	height:520px;
+	/* height:45em; */
+	/* aspect-ratio:1/1; */
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+main #column-grid svg{
+	margin-block:auto;
+}
+
+main #column-grid .overlay{
+	height:100%;
+	background:var(--portfolio-blue-80);
+	backdrop-filter:blur(.25em);
+	opacity:0%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	gap:1.5em;
+	transition:var(--transition);
+}
+
+main #column-grid .overlay:hover{
+	opacity:100%;
+}
+
+main #column-grid .overlay p:first-of-type{
+	font-size:1.2em;
+	font-weight:600;
+}
+
+main #column-grid svg{
+	width:100%;
+	fill:var(--portfolio-blue);
+}
+
+main #column-grid #icon-task:hover ~ #task *,
+main #column-grid #icon-idea:hover ~ #idea *,
+main #column-grid #icon-concept:hover ~ #concept *,
+main #column-grid #icon-implementation:hover ~ #implementation *{
+	opacity:100%;
+}
+
+main #column-grid * p{
+	width:80%;
+	margin:0 auto;
+}
+
+
+/*************************************/
+/*********** column-button ***********/
+/*************************************/
+
+main #column-button{
+	margin-left:auto;
+	position:relative;
+}
+
+main #column-button h2{
+	margin-left:auto;
+	text-align:right;
+}
+
+main #column-button .scrollbar{
+	position:absolute;
+	top:120vh;
+	right:0;
+	bottom:.75em;
+}
+
+main #column-button .scrollbar a{
+	border:.2em solid var(--portfolio-blue);
+	border-radius:2em;
+	margin-left:auto;
+	padding-block:.25em;
+	padding-inline:2em;
+	color:var(--portfolio-blue);
+	font-weight:600;
+	text-decoration:none;
+	text-transform:uppercase;
+	display:flex;
+	vertical-align:center;
+	align-items:center;
+	gap:.5em;
+	position:sticky;
+	top:90vh;
+	transition:var(--transition);
+}
+
+main #column-button .scrollbar a:hover{
+	background:var(--portfolio-blue);
+	color:var(--portfolio-yellow);
+}
+
+main #column-button .scrollbar a svg{
+	height:1.5em;
+	transition:var(--transition);
+}
+
+main #column-button .scrollbar a:hover svg{
+	fill:var(--portfolio-yellow);
+}
+
+main #column-button .scrollbar a svg{
+	width:50px;
+	fill:var(--portfolio-blue);
+}
+
+
+/*******************************************/
+/*********** media queries 960px ***********/
+/*******************************************/
+
+@media only screen and (max-width:960px){
+	h2{
+		top:2.5em;
+	}
+
+	main{
+		gap:1em;
+	}
+
+	main #column-grid > *{
+		height:35em;
+	}
+
+	main #column-grid .overlay p{
+		font-size:.8em;
+	}
+
+	main #column-button .scrollbar a{
+		padding-inline:0;
+	}
+
+	main #column-button .scrollbar a > p{
+		display:none;
+	}
+}

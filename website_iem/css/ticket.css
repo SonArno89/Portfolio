@@ -1,0 +1,210 @@
+/***************************************/
+/*********** section: ticket ***********/
+/***************************************/
+
+#ticket{
+	margin-top:2em;
+	padding:2.2em .65em;
+}
+
+#ticket header{
+	margin-bottom:2em;
+	display:flex;
+	gap:1.5em;
+	align-items:center;
+}
+
+#ticket header svg{
+	width:5em;
+	height:5em;
+	background:var(--logo-text);
+}
+
+#ticket header svg path[fill="black"]{
+	fill:var(--logo-text);
+}
+
+#ticket > flex{
+	margin-bottom:1em;
+	display:flex;
+	flex-direction:column;
+	gap:1em;
+}
+
+#ticket form{
+	box-sizing:border-box;
+	border:2px solid var(--logo-text);
+	padding:1em 2em;
+}
+
+#ticket form h4{
+	margin-bottom:1em;
+}
+
+#ticket form input{
+	padding-inline:.5em;
+	box-sizing:border-box;
+	border:2px solid var(--logo-text);
+	outline:none;
+}
+
+#ticket form input:focus{
+	border:2px solid var(--logo-blue);
+	box-shadow:0 0 1em var(--logo-blue-50);
+}
+
+#ticket form input:user-invalid{
+	border:2px solid crimson;
+	border:2px solid #dc143c;
+	/* box-shadow:0 0 1em rgba(86,8,24,.5); */
+}
+
+#ticket form input[type=number]{
+	appearance:textfield;
+}
+
+#ticket form p{
+	font:400 .7em/2 'Dax Regular';
+}
+
+#ticket form div .amount{
+	margin-bottom:1em;
+	display:flex;
+	flex-direction:column;
+	gap:.5em;
+}
+
+#ticket form div .amount flex{
+	display:flex;
+	justify-content:space-between;
+}
+
+#ticket form div .amount flex input{
+	width:45%;
+}
+
+#ticket form div .amount flex input::placeholder{
+	font-size:.7em;
+	color:var(--logo-text);
+}
+
+#ticket form div .submit{
+	display:flex;
+	flex-direction:column;
+	align-items:end;
+	gap:2.5em;
+	margin-bottom:2.2em;
+}
+
+#ticket form div .submit flex{
+	display:flex;
+	flex-direction:column;
+	gap:.5em;
+	margin-right:auto;
+}
+
+#ticket form input[type=button],
+#ticket form input[type=submit]{
+	border:none;
+	padding:.5em 2em;
+	background:var(--logo-text);
+	color:white;
+	font:500 1em 'Dax Medium';
+	transition:var(--transition);
+}
+
+#ticket form input[type=button]:hover,
+#ticket form input[type=submit]:hover{
+	background:var(--logo-blue);
+}
+
+#ticket form div grid{
+	display:grid;
+	grid-template-columns:1fr;
+	row-gap:.6em;
+}
+
+#ticket form div grid flex{
+	display:flex;
+	justify-content:space-between;
+}
+
+#ticket form div grid flex input{
+	width:60%;
+}
+
+#ticket form div .buy{
+	display:flex;
+	justify-content:space-between;
+	align-items:end;
+	margin-top:1.5em;
+}
+
+
+/************************************************/
+/*********** section: ticket (tablet) ***********/
+/************************************************/
+
+@media (min-width:768px){
+	#ticket{
+		padding:4.4em 1.3em;
+	}
+
+	#ticket > flex{
+		margin-bottom:2em;
+		flex-direction:row;
+		gap:5em;
+	}
+
+	#ticket form{
+		padding:2em 4em;
+	}
+
+	#ticket form div .amount{
+		flex-direction:row;
+		justify-content:space-between;
+		margin-bottom:2em;
+	}
+
+	#ticket form div .amount flex{
+		width:45%;
+	}
+
+	#ticket form div .submit{
+		margin-bottom:4.4em;
+	}
+
+	#ticket form div .submit,
+	#ticket form div .submit flex{
+		flex-direction:row;
+	}
+
+	#ticket form div .submit flex{
+		gap:1.5em;
+	}
+
+	#ticket form div grid{
+		grid-template-columns:repeat(2,1fr);
+		column-gap:1.2em;
+	}
+}
+
+
+/*************************************************/
+/*********** section: ticket (desktop) ***********/
+/*************************************************/
+
+@media (min-width:1400px){
+	#ticket{
+		margin-top:0;
+	}
+
+	#ticket form{
+		display:flex;
+		justify-content:space-between;
+	}
+
+	#ticket form div{
+		width:45%;
+	}
+}

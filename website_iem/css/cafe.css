@@ -1,0 +1,111 @@
+/*************************************/
+/*********** section: cafe ***********/
+/*************************************/
+
+#cafe{
+	margin-top:4em;
+	padding-block:.5em 2em;
+}
+
+#cafe .container{
+	height:90vh;
+	width:94%;
+	margin-inline:auto;
+	margin-bottom:2.5em;
+	position:relative;
+}
+
+#cafe .container .image-box,
+#cafe .container .background-box{
+	width:94%;
+	height:94%;
+	position:absolute;
+}
+
+#cafe .container .image-box{
+	background:url(../image/main/cafe_1920.jpg) no-repeat center / cover;
+	z-index:1;
+	bottom:0;
+}
+
+#cafe .container .background-box{
+	background:var(--logo-text);
+	right:0;
+}
+
+#cafe .content{
+	width:94%;
+	margin-inline:auto;
+}
+
+#cafe .content header{
+	margin-block:0 2em;
+	display:flex;
+	align-items:center;
+	gap:1.5em;
+}
+
+#cafe .content header svg{
+	height:5em;
+	aspect-ratio:1/1;
+}
+
+#cafe .content header svg path[fill="black"]{
+	fill:var(--logo-text);
+}
+
+#cafe .content flex{
+	display:flex;
+	flex-direction:column;
+	gap:3em;
+}
+
+#cafe .content flex q{
+	font-family:'Dax Regular';
+}
+
+
+/**********************************************/
+/*********** section: cafe (tablet) ***********/
+/**********************************************/
+
+@media (min-width:768px){
+	#cafe{
+		padding-block:1em 0;
+	}
+
+	#cafe .content{
+		width:74%;
+	}
+
+	#cafe .content flex{
+		height:20em;
+	}
+}
+
+
+/***********************************************/
+/*********** section: cafe (desktop) ***********/
+/***********************************************/
+
+@media (min-width:1400px){
+	#cafe{
+		margin-top:2em;
+		padding-block:2.5em 0;
+		display:flex;
+	}
+
+	#cafe .container,
+	#cafe .content{
+		width:40%;
+	}
+
+	#cafe .content header{
+		margin-block:6em;
+	}
+
+	#cafe .content flex{
+		width:64%;
+		height:25em;
+	}
+}

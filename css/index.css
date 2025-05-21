@@ -92,19 +92,19 @@ main #project grid a{
 }
 
 main #project grid #iem{
-	background:url(../export/iem/iem_segment.png) center / cover;
+	background:url(../image/iem_full_25.png) top / 200%;
 }
 
 main #project grid #dev{
-	background:url(../export/dev/dev_segment.png) center / cover;
+	background:url(../image/dev_full_25.png) top / 200%;
 }
 
 main #project grid #tch{
-	background:url(../export/tch/tch_segment.png) center / cover;
+	background:url(../image/tch_full_25.png) top / 200%;
 }
 
 main #project grid #tsv{
-	background:url(../export/tsv/tsv_segment.png) center / cover;
+	background:url(../image/tsv_full_25.png) top / 200%;
 }
 
 

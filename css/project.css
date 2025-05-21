@@ -48,7 +48,7 @@ main > *{
 	border-radius:50%;
 	display:flex;
 	position:sticky;
-	top:90vh;
+	top:87vh;
 	transition:var(--transition);
 }
 
@@ -90,19 +90,19 @@ main #column-grid{
 }
 
 main .iem{
-	background:url(../export/iem/iem_full.png) repeat-y;
+	background:url(../image/iem_full_25.png) repeat-y;
 }
 
 main .dev{
-	background:url(../export/dev/dev_full.png) repeat-y;
+	background:url(../image/dev_full_25.png) repeat-y;
 }
 
 main .tch{
-	background:url(../export/tch/tch_full.png) repeat-y;
+	background:url(../image/tch_full_25.png) repeat-y;
 }
 
 main .tsv{
-	background:url(../export/tsv/tsv_full.png) repeat-y;
+	background:url(../image/tsv_full_25.png) repeat-y;
 }
 
 main #column-grid > *{

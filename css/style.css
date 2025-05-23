@@ -147,6 +147,15 @@ nav flex a{
 	text-transform:uppercase;
 }
 
+nav flex #print{
+	color:white;
+	cursor:default;
+}
+
+nav flex #print:hover{
+	background:white;
+}
+
 nav flex a:last-of-type{
 	padding-inline:3em 5em;
 }
